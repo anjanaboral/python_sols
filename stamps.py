@@ -15,15 +15,15 @@ b. How will you change your solution, if in the future the country adds more pro
 
 def possible_stamp_collections(denomination_values: list, stamp_shape: list, number_of_leaders: int):
 
-    """Assuming each stamp ca"""
     number_of_notes = len(denomination_values)
     number_of_shapes = len(stamp_shape)
 
+   """Assuming each stamp can have all the shapes and all the leaders """
     possible_outcomes = number_of_leaders * number_of_notes * number_of_shapes
     print(f'No of possible outcomes {possible_outcomes}')
 
     number_of_tickets_to_be_collected = possible_outcomes * harmonic_mean_outcomes(possible_outcomes)
-    print(f'Total number of tickets to be collected are {number_of_tickets_to_be_collected}')
+    print(f'Total number of tickets to be collected by the hobbyist are {number_of_tickets_to_be_collected}')
 
 
 def harmonic_mean_outcomes(n):
@@ -39,6 +39,6 @@ def harmonic_mean_outcomes(n):
 if __name__ == "__main__":
     denomination_values = [1, 2, 5, 10, 50, 100]
     stamp_shapes = ['square', 'rectangle', 'triangle']
-    number_of_leaders = 2
+    number_of_leaders = 100
     possible_stamp_collections(denomination_values, stamp_shapes, number_of_leaders)
 
